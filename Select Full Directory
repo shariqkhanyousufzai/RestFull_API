@@ -1,0 +1,2 @@
+$config['csrf_exclude_uris'] = array('payments/paypalipn', 'payments/skrillipn', 'welcome/image_upload', 'api/V2/[\s\S]*');
+
