@@ -1,1 +1,8 @@
+//to work on raw request
 $_POST = json_decode($this->input->raw_input_stream, true);
+
+//to work on both request
+$rawData = json_decode(file_get_contents("php://input"));
+if(!empty($rawData)){
+  $_POST = json_decode($this->input->raw_input_stream, true);
+}
