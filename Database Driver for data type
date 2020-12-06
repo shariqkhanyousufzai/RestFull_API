@@ -1,0 +1,27 @@
+$active_group = 'default';
+$query_builder = TRUE;
+
+$db['default'] = array(
+	'dsn'      => 'mysql:host=localhost;dbname=inatote;charset=utf8;',
+	'hostname' => 'localhost',
+	'username' => 'dev',
+	'password' => 'javgarvqwaxqircd',
+	'database' => 'inatote',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE,
+	'options' => [
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ]
+);
