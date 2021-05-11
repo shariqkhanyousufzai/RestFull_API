@@ -1,0 +1,19 @@
+$res = [
+			"status" => "OK", "msg" => "success","rows_affected" => 0, "data" => [] ];
+		try
+		{
+			$this->db->set('bank',$getPaymentMethod);
+			$this->db->where('id',$lastPaymentId);
+			if($this->db->update('payments')){
+				$data['id'] = $lastPaymentId;
+				$res["data"][] = array(
+					'bank' => $getPaymentMethod
+				);
+				return $res;
+		}
+		}catch(\Exception $e)
+		{
+			$res["msg"] = "failed";
+			$res["trace"] = ["class" => $this->router->fetch_class() , "method" => $this->router->fetch_method()] ;
+			return $res;
+		}
